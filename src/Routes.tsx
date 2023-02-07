@@ -15,8 +15,7 @@ export const AppRoutes = () => {
         <Route index element={<Domestic_Animals/>} />
         <Route path=":_id" element={<Domestic_Animal_List_Detail/>}/>
 
-        (//vedi usedetails dalla repo )
-
+        
 
         <Route path="new" element={<Add_Domestic_Animal/>} />
       </Route>
