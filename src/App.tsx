@@ -2,7 +2,7 @@ import React from 'react';
 import './App.scss';
 import { BrowserRouter } from 'react-router-dom';
 import { Header } from './modules/layout/header';
-import { AppRoutes } from './routes';
+import { AppRoutes } from './Routes';
 
 function App() {
   return (
