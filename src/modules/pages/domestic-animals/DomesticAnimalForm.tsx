@@ -11,7 +11,7 @@ type Tprops = {
 };
 
 
-export const PetForm = (props: Tprops) => {
+export const DomesticAnimalForm = (props: Tprops) => {
   const {
     register,
     handleSubmit,
