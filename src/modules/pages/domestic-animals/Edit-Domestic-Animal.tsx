@@ -4,7 +4,7 @@ import { useLocation, useParams } from "react-router-dom";
 import { IDomesticAnimal } from "../../../model/IDomesticAnimal";
 import { TCurrentDomesticAnimalState } from "./D_animal_list_detail
 
-import { PetForm } from "./petform";
+import { DomesticAnimalForm } from "./DomesticAnimalForm";
 
 export const EditDomesticAnimal = () => {
   const location = useLocation();
@@ -56,7 +56,7 @@ export const EditDomesticAnimal = () => {
       {currentAnimalState.loading && "Loading"}
       {currentAnimalState.error && "Error loading "}
       {currentAnimalState.animal && (
-        <PetForm defaultValues={currentAnimalState.animal} />
+        <DomesticAnimalForm defaultValues={currentAnimalState.animal} />
       )}
     </div>
   );
