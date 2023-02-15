@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useLocation, useParams } from "react-router-dom";
 import { IDomesticAnimal } from "../../../model/IDomesticAnimal";
-import { TCurrentDomesticAnimalState } from "./D_animal_list_detail
+import { TCurrentDomesticAnimalState } from "./D_animal_list_detail"
 
 import { DomesticAnimalForm } from "./DomesticAnimalForm";
 
