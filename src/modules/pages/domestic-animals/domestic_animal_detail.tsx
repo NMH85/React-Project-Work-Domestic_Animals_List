@@ -57,7 +57,7 @@ export const Domestic_Animal_List_Detail = () => {
       {AnimalStateNow.loading && "Loading"}
       {AnimalStateNow.error && "Error loading "}
       {AnimalStateNow.animal &&
-        /*The id for the selected pet is "${currentAnimalState.animal._id}"*/
+      
         ` ${ShowAge(calcAge(AnimalStateNow.animal.birthDate))}`}
     </div>
   );
