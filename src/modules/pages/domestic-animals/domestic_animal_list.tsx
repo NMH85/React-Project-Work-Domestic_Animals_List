@@ -9,7 +9,7 @@ export const Domestic_Animal_List = (props: Props) => {
   const animal = props.animal;
 
   return (
-    <div className="domestic-animal-list">
+    <div className="domestic_animal_list">
       <b>Name: {animal.name}</b>
       <p>Breed: {animal.breed}</p>
       <p>Type: {animal.type}</p>
