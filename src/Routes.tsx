@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import { Domestic_Animals } from "./modules/pages/domestic-animals/domestic_animals";
 import { NotExists } from "./modules/pages/notexists";
-import { Dashboard } from "./modules/pages/Dashboard";
+import { Dashboard } from "./modules/pages/domestic-animals/Dashboard/Dashboard";
 import { DomesticAnimalForm } from "./modules/pages/domestic-animals/DomesticAnimalForm";
 import { DomesticAnimalDetail } from "./modules/pages/domestic-animals/D_animal_list_detail"
 import { EditDomesticAnimal } from "./modules/pages/domestic-animals/Edit-Domestic-Animal";
