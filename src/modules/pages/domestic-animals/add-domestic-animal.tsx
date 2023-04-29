@@ -1,7 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { IDomesticAnimal } from "../../../model/IDomesticAnimal";
-import { defaultDomesticAnimal } from "../../../utils/defaultDomesticAnimal";
+import { IDomesticAnimal } from "../../../model/HomelyFriend";
+import { defaultDomesticAnimal } from "../../../utils/Utility.HomelyFriend";
 
 import dayjs from "dayjs";
 

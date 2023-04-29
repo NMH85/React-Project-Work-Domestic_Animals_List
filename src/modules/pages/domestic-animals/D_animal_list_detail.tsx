@@ -1,8 +1,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams, useLocation, Link, useNavigate } from "react-router-dom";
-import { IDomesticAnimal } from "../../../model/IDomesticAnimal";
-import { calcAge, ShowAge } from "../../../utils/shared-functions";
+import { IDomesticAnimal } from "../../../model/HomelyFriend";
+import { calcAge, ShowAge } from "../../../utils/Utility-Functions";
 
 export type TCurrentDomesticAnimalState = {
   animal: IDomesticAnimal | null;

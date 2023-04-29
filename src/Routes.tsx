@@ -5,7 +5,7 @@ import { Dashboard } from "./modules/pages/domestic-animals/Dashboard/Dashboard"
 import { DomesticAnimalForm } from "./modules/pages/domestic-animals/DomesticAnimalForm";
 import { DomesticAnimalDetail } from "./modules/pages/domestic-animals/D_animal_list_detail"
 import { EditDomesticAnimal } from "./modules/pages/domestic-animals/Edit-Domestic-Animal";
-import { defaultDomesticAnimal } from "./utils/defaultDomesticAnimal";
+import { standardHomelyFriend } from "./utils/Utility.HomelyFriend";
 
 export const AppRoutes = () => {
   return (
@@ -13,13 +13,10 @@ export const AppRoutes = () => {
       <Route path="/" element={<Dashboard />} />
       <Route path="*" element={<NotExists />} />
       <Route path="/animal">
-        <Route index element={<Domestic_Animals/>} />
         <Route path=":_id" element={<DomesticAnimalDetail/>}/>
         <Route path=":_id/edit" element={<EditDomesticAnimal />} />
-        <Route path="new" element={<DomesticAnimalForm defaultValues={defaultDomesticAnimal} />} />
-        
-      </Route>
-      (/**/)
+        <Route path="new" element={<DomesticAnimalForm defaultValues={standardHomelyFriend} />} />
+        </Route>
     </Routes>
   );
 };

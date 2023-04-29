@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import dayjs from "dayjs";
 import { TCurrentDomesticAnimalState } from "./D_animal_list_detail";
-import { IDomesticAnimal } from "../../../model/IDomesticAnimal";
+import { IDomesticAnimal } from "../../../model/HomelyFriend";
 import axios from "axios";
 
 type Tprops = {
