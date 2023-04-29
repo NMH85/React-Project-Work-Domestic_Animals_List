@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.scss';
 import { BrowserRouter } from 'react-router-dom';
-import { Header } from './modules/layout/header';
+import { Header } from './modules/layout/Header';
 import { AppRoutes } from './Routes';
 
 function App() {
