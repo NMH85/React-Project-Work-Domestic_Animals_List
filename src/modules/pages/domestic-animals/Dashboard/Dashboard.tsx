@@ -58,7 +58,7 @@ useEffect(() => {
 return (
 
 <div className= 'homely_friends'> 
-    <h1 className= 'homely_friends title'> Homely Friends</h1>
+    <h1 className= 'homely_friends title'> HOMELY FRIENDS CATALOG</h1>
         <div className= 'homely_friends Sort'>
 
     {homelyFriendState.retrevingData && 'Retrieving Data'}
