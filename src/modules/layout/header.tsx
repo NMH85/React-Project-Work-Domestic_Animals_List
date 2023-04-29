@@ -7,7 +7,7 @@ export const Header = () => {
     
     <div className = " header ">
     
-     <h3> Homely Friends for sale </h3>
+     <h3> Homely Friends for Sale </h3>
     
       <Link to="/">Dashboard</Link>
       
