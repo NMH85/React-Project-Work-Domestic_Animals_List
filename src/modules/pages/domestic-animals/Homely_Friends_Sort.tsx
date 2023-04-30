@@ -1,5 +1,5 @@
 import { IHomelyFriend } from "../../../model/HomelyFriend";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -10,6 +10,8 @@ type Props = {
 export const Homely_Friend_Sorting = (props: Props) => {
   const homely_friend = props.homely_friend;
 
+  const navigate = useNavigate()
+  
   return (
     <div className="Homely-Friends-Sort">
     
@@ -28,11 +30,11 @@ export const Homely_Friend_Sorting = (props: Props) => {
       <p>Pedigree: {homely_friend.pedigree ? 'true' : 'false'}</p>
 
       
-      <Link to={`/animal/${homely_friend._id}`} state={homely_friend}>
+      <button onClick={() => navigate (`/animal/${homely_friend._id}`)}>
         
-        <button>Infos </button>
+      Infos </button>
       
-      </Link>
+      
       
       </div>
 
