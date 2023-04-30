@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 import { IDomesticAnimal } from "../../../model/HomelyFriend";
-import {  Domestic_Animal_List_Detail } from "./domestic_animal_detail";
+import {  Domestic_Animal_List_Detail } from "./Homely_Friends_Infos";
 import { Domestic_Animal_List } from "./Homely_Friends_Sort";
 
 type TDomesticAnimalState = {
