@@ -4,7 +4,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { IHomelyFriend } from "../../../model/HomelyFriend";
 import { checkYears, VisualizeAge } from "../../../utils/Utility-Functions";
 import { URL } from '../../../API_URL';
-
+import { Homely_Friend_Remove } from "./Homely_Friends_Remove";
 
 
 type THomelyFriendStateII = {
@@ -150,6 +150,9 @@ const [homelyFriendState, setHomelyFriendState] =
 
         Modify
         </button>
+      
+<Homely_Friend_Remove homely_friend= {homelyFriendState.homely_friends}/>
+
 
       </div>
 
