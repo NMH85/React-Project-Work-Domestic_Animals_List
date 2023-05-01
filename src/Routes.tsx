@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import { NotExists } from "./modules/pages/notexists";
 import { Dashboard } from "./modules/pages/domestic-animals/Dashboard/Dashboard";
 import { DomesticAnimalForm } from "./modules/pages/domestic-animals/DomesticAnimalForm";
-import { DomesticAnimalDetail } from "./modules/pages/domestic-animals/D_animal_list_detail"
+import { Homely_Friend_Infos } from "./modules/pages/domestic-animals/Homely_Friends_Infos";
 import { EditDomesticAnimal } from "./modules/pages/domestic-animals/Edit-Domestic-Animal";
 import { standardHomelyFriend } from "./utils/Utility.HomelyFriend";
 
@@ -12,7 +12,7 @@ export const AppRoutes = () => {
       <Route path="/" element={<Dashboard />} />
       <Route path="*" element={<NotExists />} />
       <Route path="/animal">
-        <Route path=":_id" element={<DomesticAnimalDetail/>}/>
+        <Route path=":_id" element={<Homely_Friend_Infos/>}/>
         <Route path=":_id/edit" element={<EditDomesticAnimal />} />
         <Route path="new" element={<DomesticAnimalForm defaultValues={standardHomelyFriend} />} />
         </Route>
