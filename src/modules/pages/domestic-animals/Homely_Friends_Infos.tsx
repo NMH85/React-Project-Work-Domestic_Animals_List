@@ -11,7 +11,7 @@ type THomelyFriendStateII = {
   
   retrevingData: boolean;
   error: boolean;
-  homely_friends: IHomelyFriend | null;
+  homely_friend: IHomelyFriend | null;
 };
 
 export const Homely_Friend_Infos = () => {
@@ -26,7 +26,7 @@ const [homelyFriendState, setHomelyFriendState] =
     
       useState<THomelyFriendStateII>({
       
-      homely_friends: null,
+      homely_friend: null,
       retrevingData: false,
       error: false,
     });
@@ -51,7 +51,7 @@ const [homelyFriendState, setHomelyFriendState] =
         ...homelyFriendState,
         
         retrevingData: false,
-        homely_friends: data,
+        homely_friend: data,
       });
     
     } catch (er) {
@@ -81,64 +81,64 @@ const [homelyFriendState, setHomelyFriendState] =
       
       {homelyFriendState.error && "Error Retrieving Data "}
       
-      {homelyFriendState.homely_friends &&
-      ` ${VisualizeAge (checkYears (homelyFriendState.homely_friends.birthdate))}`}
+      {homelyFriendState.homely_friend &&
+      ` ${VisualizeAge (checkYears (homelyFriendState.homely_friend.birthdate))}`}
       
-      {homelyFriendState.homely_friends && <>
+      {homelyFriendState.homely_friend && <>
 
       <label className='all infos'>
         
-        <h2>Identifier : {homelyFriendState.homely_friends?._id} </h2>
+        <h2>Identifier : {homelyFriendState.homely_friend?._id} </h2>
       
       </label>
 
       <label className='all infos'>
 
-        <img src={homelyFriendState.homely_friends?.imgUrl} alt='homely friend picture'/>
+        <img src={homelyFriendState.homely_friend?.imgUrl} alt='homely friend picture'/>
       
       </label>
 
       <label className='all infos'>
 
-        <h2>Name : {homelyFriendState.homely_friends?.name}</h2>
+        <h2>Name : {homelyFriendState.homely_friend?.name}</h2>
       
       </label>
 
       <label className='all infos'>
         
-        <h2>Type : {homelyFriendState.homely_friends?.type}</h2>
+        <h2>Type : {homelyFriendState.homely_friend?.type}</h2>
 
       </label>
 
       <div className='all infos'>
 
-        <div>Pedigree : {homelyFriendState.homely_friends?.pedigree}</div>
+        <div>Pedigree : {homelyFriendState.homely_friend?.pedigree}</div>
 
       </div>
 
     <div className='all infos'>
 
-      <div>Breed : {homelyFriendState.homely_friends?.breed}</div>
+      <div>Breed : {homelyFriendState.homely_friend?.breed}</div>
 
     </div>
 
 
     <div className='all infos'>
 
-      <div>Description : {homelyFriendState.homely_friends?.description}</div>
+      <div>Description : {homelyFriendState.homely_friend?.description}</div>
 
     </div>
 
     <div className='all infos'>
 
-      <div>Created At : {homelyFriendState.homely_friends?.created_at}</div>
+      <div>Created At : {homelyFriendState.homely_friend?.created_at}</div>
 
     </div>
 
 
     <div className='all infos'>
 
-        <div>Updated At : {homelyFriendState.homely_friends?.updated_at}</div>
+        <div>Updated At : {homelyFriendState.homely_friend?.updated_at}</div>
 
     </div>
 
@@ -146,12 +146,12 @@ const [homelyFriendState, setHomelyFriendState] =
 
         <button disabled={homelyFriendState.retrevingData} 
         
-        onClick={ ()=> navigate ('/animal/${homelyFriendState.homely_friends?._id}/modify')}>
+        onClick={ ()=> navigate ('/animal/${homelyFriendState.homely_friend?._id}/modify')}>
 
         Modify
         </button>
       
-<Homely_Friend_Remove homely_friend= {homelyFriendState.homely_friends}/>
+<Homely_Friend_Remove homely_friend= {homelyFriendState.homely_friend}/>
 
 
       </div>
