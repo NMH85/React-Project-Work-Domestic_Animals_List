@@ -4,7 +4,7 @@ import { useLocation, useParams } from "react-router-dom";
 import { IDomesticAnimal } from "../../../model/HomelyFriend";
 import { TCurrentDomesticAnimalState } from "./D_animal_list_detail"
 
-import { DomesticAnimalForm } from "./DomesticAnimalForm";
+import { DomesticAnimalForm } from "./Homely_Friends_Form";
 
 export const EditDomesticAnimal = () => {
   const location = useLocation();
