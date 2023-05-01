@@ -30,7 +30,7 @@ export const Homely_Friend_Sorting = (props: Props) => {
       <p>Pedigree: {homely_friend.pedigree ? 'true' : 'false'}</p>
 
       
-      <Link to={'/animal/${homely_friend._id}'} state={homely_friend}>
+      <Link to={`/animal/${homely_friend._id}`} state={homely_friend}>
         
         <button>Infos</button>
         
