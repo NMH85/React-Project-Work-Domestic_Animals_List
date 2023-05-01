@@ -1,6 +1,6 @@
 import { IHomelyFriend } from "../../../model/HomelyFriend";
 import { Link } from "react-router-dom";
-
+import { Homely_Friend_Remove } from "./Homely_Friends_Remove";
 
 
 type Props = {
@@ -35,7 +35,7 @@ export const Homely_Friend_Sorting = (props: Props) => {
         <button>Infos</button>
         
         </Link> 
-       
+       <Homely_Friend_Remove homely_friend={homely_friend}/>
     </div>
 
     </div>
