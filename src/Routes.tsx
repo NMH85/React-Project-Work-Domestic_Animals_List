@@ -10,11 +10,10 @@ export const AppRoutes = () => {
     <Routes>
       <Route path="/" element={<Dashboard />} />
       <Route path="*" element={<NotExists />} />
-      <Route path="/animal">
-        <Route path=":_id" element={<Homely_Friend_Infos/>}/>
-        <Route path=":_id/edit" element={<Homely_Friend_Form/>} />
-        <Route path="new" element={<Homely_Friend_Form />} />
-        </Route>
+      <Route path="/animal/:_id" element={<Homely_Friend_Infos/>}/>
+        <Route path="/animal/:_id/edit" element={<Homely_Friend_Form/>} />
+        <Route path="/animals/new" element={<Homely_Friend_Form />} />
+        
     </Routes>
   );
 };
