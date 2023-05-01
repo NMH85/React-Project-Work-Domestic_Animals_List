@@ -13,7 +13,7 @@ type THomelyFriendStateII = {
   
   retrevingData: boolean;
   error: boolean;
-  homely_friends: IHomelyFriend | null;
+  homely_friend: IHomelyFriend | null;
 };
 
 
@@ -31,7 +31,7 @@ export const Homely_Friend_Form = () => {
 
     retrevingData: false,
     error: false,
-    homely_friends: null,
+    homely_friend: null,
 });
 
 
@@ -60,7 +60,7 @@ const data : IHomelyFriend = ask.data;
 
 setHomelyFriendState({
 ...homelyFriendState,
-homely_friends: data,
+homely_friend: data,
 retrevingData: false,
 });
 
