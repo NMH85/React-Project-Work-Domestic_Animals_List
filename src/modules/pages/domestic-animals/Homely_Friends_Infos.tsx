@@ -146,7 +146,7 @@ const [homelyFriendState, setHomelyFriendState] =
 
         <button disabled={homelyFriendState.retrevingData} 
         
-        onClick={ ()=> navigate ('/animal/${homelyFriendState.homely_friend?._id}/modify')}>
+        onClick={ ()=> navigate (`/animal/${homelyFriendState.homely_friend?._id}/edit`)}>
 
         Modify
         </button>
