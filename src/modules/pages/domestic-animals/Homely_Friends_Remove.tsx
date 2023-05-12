@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { IHomelyFriend } from "../../../model/HomelyFriend";
 import { URL } from '../../../API_URL';
-import { checkYears, VisualizeAge } from "../../../utils/Utility-Functions";
+
 
 
 type THomelyFriendStateIII = {
@@ -55,7 +55,7 @@ setHomelyFriendRemoveState({
 removing: false,
 });
 
-confirm(`Friend removed successfully`);
+window.confirm(`Friend removed successfully`);
 
 goTo(`/`);
 
@@ -106,7 +106,7 @@ confirmRemove: false
 
 });
 
-confirm ('Friend not removed');
+window.confirm ('Friend not removed');
 
 }}>NO</button>
 

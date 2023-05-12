@@ -99,7 +99,9 @@ retrevingData: false,
 });
 
 const id = ask.data._id;
-confirm(notify);
+
+window.confirm(notify);
+
 goTo (`/animal/${id}`);
 
 } catch (er) {
