@@ -37,7 +37,7 @@ error: false,
 
 const update = () => window.location.reload();
 
-const Homely_Friend_Remove = async () => {
+const HomelyFriendErase = async () => {
 
 setHomelyFriendRemoveState({
 
@@ -50,6 +50,7 @@ removing: true,
 try {
 
 await axios.delete(`${URL}/animal/${homely_friend._id}`);
+
 setHomelyFriendRemoveState({
 ...homelyFriendRemoveState,
 removing: false,
@@ -94,7 +95,7 @@ confirmRemove: true,
 {homelyFriendRemoveState.confirmRemove && <>
   <p>Are you sure ?</p>
 
-  <button onClick={() => Homely_Friend_Remove()}>YES</button>
+  <button onClick={() => HomelyFriendErase()}>YES</button>
 <button onClick={() => {
 
 goTo(`/`);
