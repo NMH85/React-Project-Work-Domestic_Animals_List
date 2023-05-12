@@ -1,8 +1,8 @@
 import { Routes, Route } from "react-router-dom";
 import { NotExists } from "./modules/pages/notexists";
-import { Dashboard } from "./modules/pages/domestic-animals/Dashboard/Dashboard";
-import { HomelyFriendForm } from "./modules/pages/domestic-animals/Homely-Friends-Form";
-import { HomelyFriendInfos } from "./modules/pages/domestic-animals/Homely-Friends-Infos";
+import { Dashboard } from "./modules/pages/Homely-Friends/Dashboard/Dashboard";
+import { HomelyFriendForm } from "./modules/pages/Homely-Friends/Homely-Friends-Form";
+import { HomelyFriendInfos } from "./modules/pages/Homely-Friends/Homely-Friends-Infos";
 
 
 export const DirectoryPaths = () => {
