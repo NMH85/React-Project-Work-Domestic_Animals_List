@@ -14,9 +14,9 @@ export const VisualizeAge=( lifeTime:number ) :string =>{
 
 switch ( lifeTime )
 
-{case 0: return `He is less than a Year old`;
+{case 0: return `This four-legged friend is less than a Year Old`;
 
-case 1: return ` He is a Year old`;
+case 1: return ` This four-legged friend is a Year Old`;
 
-default: return ` He is ${ lifeTime } Years old`;}
+default: return ` This four-legged friend is ${ lifeTime } Years Old`;}
 }

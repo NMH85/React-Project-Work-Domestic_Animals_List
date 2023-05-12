@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { URL } from '../../../../API_URL';
 import { IHomelyFriend } from "../../../../model/HomelyFriend";
-import { Homely_Friend_Sorting } from '../Homely_Friends_Sort';
+import { HomelyFriendSorting } from '../Homely-Friends-Sort';
 
 
 
@@ -66,7 +66,7 @@ return (
     {homelyFriendState.homely_friends?.length === 0 && 'No Homely Friends found'}
     {homelyFriendState.homely_friends?.map(homely_friend => (
 
-        <Homely_Friend_Sorting key= {homely_friend._id} homely_friend={homely_friend}/>
+        <HomelyFriendSorting key= {homely_friend._id} homely_friend={homely_friend}/>
     ))}
 
         </div>

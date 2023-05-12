@@ -4,7 +4,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { IHomelyFriend } from "../../../model/HomelyFriend";
 import { checkYears, VisualizeAge } from "../../../utils/Utility-Functions";
 import { URL } from '../../../API_URL';
-import { Homely_Friend_Remove } from "./Homely_Friends_Remove";
+import { HomelyFriendRemove } from "./Homely-Friends-Remove";
 
 
 type THomelyFriendStateII = {
@@ -14,7 +14,7 @@ type THomelyFriendStateII = {
   homely_friend: IHomelyFriend | null;
 };
 
-export const Homely_Friend_Infos = () => {
+export const HomelyFriendInfos = () => {
   
   const check = useParams();
   const goTo = useNavigate();
@@ -85,7 +85,7 @@ const [homelyFriendState, setHomelyFriendState] =
 
       <label className='all infos'>
         
-        <h2>Identifier : {homelyFriendState.homely_friend?._id} </h2>
+        <h2>IDENTIFIER : {homelyFriendState.homely_friend?._id} </h2>
       
       </label>
 
@@ -109,7 +109,7 @@ const [homelyFriendState, setHomelyFriendState] =
 
       <div className='all infos'>
 
-      <div>BirthDate : {homelyFriendState.homely_friend?.birthDate}</div>
+      <div>Born On : {homelyFriendState.homely_friend?.birthDate}</div>
 
       </div>
 
@@ -152,10 +152,10 @@ const [homelyFriendState, setHomelyFriendState] =
         
         onClick={ ()=> goTo (`/animal/${homelyFriendState.homely_friend?._id}/edit`)}>
 
-        Modify
+        MODIFY
         </button>
       
-      <Homely_Friend_Remove homely_friend= {homelyFriendState.homely_friend}/>
+      <HomelyFriendRemove homely_friend= {homelyFriendState.homely_friend}/>
 
 
       </div>

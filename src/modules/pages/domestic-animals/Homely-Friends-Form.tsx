@@ -17,7 +17,7 @@ type THomelyFriendStateII = {
 };
 
 
-export const Homely_Friend_Form = () => {
+export const HomelyFriendForm = () => {
 
   const goTo = useNavigate ();
 
@@ -136,16 +136,17 @@ return (
 
 <div className='Homely_Friend_Form'>
 
-{_id && <><h1>Update your Friend</h1></>}
+{!_id && <><h1>REGISTER YOUR FRIEND</h1></>}
 
-{!_id && <><h1>Register your Friend</h1></>}
+{_id && <><h1>UPDATE YOUR FRIEND INFOS</h1></>}
+
 
 <form>
 
 
 <div className='row'>
 
-<label htmlFor='name'>Insert your friend's Name:  </label>
+<label htmlFor='name'>Insert Your Friend's Name:  </label>
   <input
       id='name'
       {...register('name', {
@@ -157,17 +158,20 @@ return (
 </div>
 
 <div className="row">
-  <label htmlFor="type" id="type"> Your Friend is a CAT or DOG ? </label>
+  <label htmlFor="type" id="type"> Your Friend is a CAT or a DOG ? </label>
+    
     <select {...register("type", { required: true })}>
-      <option value="CAT">Cat</option>
-      <option value="DOG">Dog</option>
+      
+      <option value="CAT">CAT</option>
+      <option value="DOG">DOG</option>
       </select>
 </div>
         
         
   {watchType && (
     <div className="row">
-      <label htmlFor="breed" id="breed"> Your Friend Breed: </label>
+      
+      <label htmlFor="breed" id="breed"> Select Your Friend's Breed: </label>
         <select
         {...register("breed", {
         required: { value: true, message: "Field required" },
@@ -175,74 +179,105 @@ return (
               
               
   {watchType === "CAT" ? ( <>
-    <option value="">None</option>
+    
+    <option value="">Stray Cat</option>
+    <option value="Cymrics">Cymrics</option>
+    <option value="Siamese">Siamese</option>
+    <option value="Burma's Sacred">Burma's Sacred</option>
     <option value="Persian">Persian</option>
+    <option value="Ragdoll">Ragdoll</option>
     <option value="Abyssinian">Abyssinian</option>
+    <option value="Norwegian">Norwegian</option>
+    <option value="Maine Coon">Maine Coon</option>
+    <option value="Sphynx">Sphynx</option>
+  
   </>) : 
   
   (<>
-    <option value="">None</option>
+    
+    <option value="">Stray Dog</option>
+    <option value="Australian Silky Terrier">Australian Silky Terrier</option>
+    <option value="Chihuahua">Chihuahua</option>
     <option value="Pinscher">Pinscher</option>
+    <option value="Pomeranian">Pomeranian</option>
     <option value="Pitbull">Pitbull</option>
+    <option value="Yorkshire Terrier">Yorkshire Terrier</option>
+    <option value="German Shepherd">German Shepherd</option>
+    <option value="Great Dane">Great Dane</option>
+    <option value="Rough Collie">Rough Collie</option>
+  
   </> )}
+  
   </select>
   </div>)}
 
 
   <div className='row'>
-  <label htmlFor='birthDate'>Insert your friend's birthdate:  </label>
+  <label htmlFor='birthDate'>Select Your Friend's Birthdate:  </label>
+  
   <input
     id='birthDate'
     type='date'
     max={actualDay}
     {...register('birthDate', {
     required: { value: true, message: 'Field Required' },
+  
   })}
   />
+  
   {errors.birthDate && errors.birthDate.message}
   </div>
 
   
   <div className='row'>
-  <label htmlFor='imgUrl'>Insert your friend picture:  </label>
+  <label htmlFor='imgUrl'>Insert Your Friend's Picture URL :  </label>
+  
   <input
     id='imgUrl'
     {...register('imgUrl', {
     required: { value: true, message: 'Field Required' },
+  
   })}
     placeholder='Image'
   />
+  
   {errors.imgUrl && errors.imgUrl.message}
   </div>
 
                 
   <div className='row'>
-  <label htmlFor='description'>Describe your friend  </label>
+  <label htmlFor='description'>Describe Your Friend  </label>
+  
   <input
     id='description'
     {...register('description', {
     required: { value: true, message: 'Field Required' },
     minLength: { value: 9, message: 'Min 10 char allowed'}
+  
   })}
   placeholder='Description'
   />
+  
   {errors.description && errors.description.message}
   </div>
 
                 
   <div className='row'>
-  <label htmlFor='pedigree'>Your friend has a pedigree ? </label>
+  <label htmlFor='pedigree'>Does Your Friend have a Pedigree ? </label>
+  
   <input
     type='checkbox'
     id='pedigree'
     {...register('pedigree', {
     required: { value: false, message: 'Field not Required' }
+  
   })}
   />
   </div>
 
                 
   <div className='row'>
+    
     {watchImage && (
     <img className='preview-image' src={watchImage} />
   )}
@@ -256,11 +291,11 @@ return (
 <div className='row-RegButton'>
 
 
-<button disabled={!isValid}onClick={handleSubmit(onSubmit)}> Register </button>
+<button disabled={!isValid}onClick={handleSubmit(onSubmit)}> REGISTER </button>
 
 {_id &&<>
 
-<button onClick={() => goTo(`/animal/${_id}`)}> Go Back </button>
+<button onClick={() => goTo(`/animal/${_id}`)}> GO BACK </button>
 
 </>}
 

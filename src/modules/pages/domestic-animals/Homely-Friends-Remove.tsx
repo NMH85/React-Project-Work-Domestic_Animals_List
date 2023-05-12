@@ -19,7 +19,7 @@ homely_friend:IHomelyFriend
 
 }
 
-export const Homely_Friend_Remove = (props: Props) => {
+export const HomelyFriendRemove = (props: Props) => {
 
 
 const { homely_friend } = props;
@@ -87,7 +87,7 @@ confirmRemove: true,
 
 });
 
-}}>Remove Friend</button>
+}}>REMOVE FRIEND</button>
 
 </>}
 

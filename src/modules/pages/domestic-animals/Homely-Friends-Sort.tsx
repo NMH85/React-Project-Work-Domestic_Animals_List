@@ -6,7 +6,7 @@ type Props = {
   homely_friend: IHomelyFriend;
 };
 
-export const Homely_Friend_Sorting = (props: Props) => {
+export const HomelyFriendSorting = (props: Props) => {
   const homely_friend = props.homely_friend;
 
   
@@ -25,14 +25,14 @@ export const Homely_Friend_Sorting = (props: Props) => {
       
       <p>Type: {homely_friend.type}</p>
       
-      <p>BirthDate: {homely_friend.birthDate}</p>
+      <p>Born On: {homely_friend.birthDate}</p>
 
       <p>Pedigree: {homely_friend.pedigree ? 'YES' : 'NO'}</p>
 
       
       <Link to={`/animal/${homely_friend._id}`} state={homely_friend}>
         
-        <button>Infos</button>
+        <button>MORE INFORMATIONS</button>
         
         </Link> 
        

@@ -11,7 +11,7 @@ export const Header = () => {
     
       <Link to="/">Dashboard</Link>
       
-      <Link to="/animal/new">Register your Friend</Link>
+      <Link to="/animal/new">Register Your Friend</Link>
     
     </div>
   );
