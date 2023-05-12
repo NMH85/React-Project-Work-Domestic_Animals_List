@@ -16,10 +16,10 @@ type THomelyFriendStateII = {
 
 export const Homely_Friend_Infos = () => {
   
-  const params = useParams();
-  const navigate = useNavigate();
+  const check = useParams();
+  const goTo = useNavigate();
 
-  const _id = params._id;
+  const _id = check._id;
 
 
 const [homelyFriendState, setHomelyFriendState] =
@@ -146,7 +146,7 @@ const [homelyFriendState, setHomelyFriendState] =
 
         <button disabled={homelyFriendState.retrevingData} 
         
-        onClick={ ()=> navigate (`/animal/${homelyFriendState.homely_friend?._id}/edit`)}>
+        onClick={ ()=> goTo (`/animal/${homelyFriendState.homely_friend?._id}/edit`)}>
 
         Modify
         </button>

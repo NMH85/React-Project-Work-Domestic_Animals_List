@@ -1,4 +1,4 @@
-export const checkYears = ( birthdate:string ) => {
+export const checkYears = ( birthdate:string ) :number => {
     
    
     const Birthyear = new Date( birthdate ).getFullYear();
@@ -9,7 +9,7 @@ export const checkYears = ( birthdate:string ) => {
 }
 
 
-export const VisualizeAge=( lifeTime:number )=>{
+export const VisualizeAge=( lifeTime:number ) :string =>{
 
 
 switch ( lifeTime )

@@ -1,7 +1,7 @@
 import { IHomelyFriend } from "../../../model/HomelyFriend";
 import { Link } from "react-router-dom";
 import { Homely_Friend_Remove } from "./Homely_Friends_Remove";
-
+import { checkYears, VisualizeAge } from "../../../utils/Utility-Functions";
 
 type Props = {
   homely_friend: IHomelyFriend;
@@ -25,7 +25,7 @@ export const Homely_Friend_Sorting = (props: Props) => {
       
       <p>Type: {homely_friend.type}</p>
       
-      <p>BirthDate: {homely_friend.birthdate}</p>
+      <p>BirthDate: {`${VisualizeAge (checkYears (homely_friend.birthdate))}`}</p>
 
       <p>Pedigree: {homely_friend.pedigree ? 'true' : 'false'}</p>
 
