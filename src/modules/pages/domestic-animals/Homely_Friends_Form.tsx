@@ -188,16 +188,16 @@ return (
 
 
   <div className='row'>
-  <label htmlFor='birthdate'>Insert your friend's birthdate:  </label>
+  <label htmlFor='birthDate'>Insert your friend's birthdate:  </label>
   <input
-    id='birthdate'
+    id='birthDate'
     type='date'
     max={actualDay}
-    {...register('birthdate', {
+    {...register('birthDate', {
     required: { value: true, message: 'Field Required' },
   })}
   />
-  {errors.birthdate && errors.birthdate.message}
+  {errors.birthDate && errors.birthDate.message}
   </div>
 
   

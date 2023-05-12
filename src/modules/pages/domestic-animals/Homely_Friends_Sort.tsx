@@ -10,6 +10,7 @@ type Props = {
 export const Homely_Friend_Sorting = (props: Props) => {
   const homely_friend = props.homely_friend;
 
+  
 
   
   return (
@@ -25,7 +26,7 @@ export const Homely_Friend_Sorting = (props: Props) => {
       
       <p>Type: {homely_friend.type}</p>
       
-      <p>BirthDate: {`${VisualizeAge (checkYears (homely_friend.birthdate))}`}</p>
+      <p>BirthDate: {`${VisualizeAge (checkYears (homely_friend.birthDate))}`}</p>
 
       <p>Pedigree: {homely_friend.pedigree ? 'true' : 'false'}</p>
 

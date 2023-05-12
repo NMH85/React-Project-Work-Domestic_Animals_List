@@ -3,7 +3,7 @@ _id?: string;
 name: string;
 type: "CAT" | "DOG" | null;
 breed: string;
-birthdate: string;
+birthDate: string;
 imgUrl: string;
 description: string;
 pedigree: boolean;

@@ -81,9 +81,6 @@ const [homelyFriendState, setHomelyFriendState] =
       
       {homelyFriendState.error && "Error Retrieving Data "}
       
-      {homelyFriendState.homely_friend &&
-      ` ${VisualizeAge (checkYears (homelyFriendState.homely_friend.birthdate))}`}
-      
       {homelyFriendState.homely_friend && <>
 
       <label className='all infos'>
@@ -112,6 +109,12 @@ const [homelyFriendState, setHomelyFriendState] =
 
       <div className='all infos'>
 
+      <div>BirthDate : {homelyFriendState.homely_friend?.birthDate}</div>
+
+      </div>
+
+      <div className='all infos'>
+
         <div>Pedigree : {homelyFriendState.homely_friend?.pedigree}</div>
 
       </div>
@@ -121,7 +124,8 @@ const [homelyFriendState, setHomelyFriendState] =
       <div>Breed : {homelyFriendState.homely_friend?.breed}</div>
 
     </div>
-
+    
+    {VisualizeAge(checkYears (homelyFriendState.homely_friend.birthDate))}
 
     <div className='all infos'>
 
@@ -151,14 +155,14 @@ const [homelyFriendState, setHomelyFriendState] =
         Modify
         </button>
       
-<Homely_Friend_Remove homely_friend= {homelyFriendState.homely_friend}/>
+      <Homely_Friend_Remove homely_friend= {homelyFriendState.homely_friend}/>
 
 
       </div>
 
 
     </>}
-      
+  
       </div>
   );
 };
