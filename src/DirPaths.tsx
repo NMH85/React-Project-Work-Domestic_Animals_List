@@ -5,7 +5,7 @@ import { Homely_Friend_Form } from "./modules/pages/domestic-animals/Homely_Frie
 import { Homely_Friend_Infos } from "./modules/pages/domestic-animals/Homely_Friends_Infos";
 
 
-export const AppRoutes = () => {
+export const Directory_Paths = () => {
   return (
     <Routes>
       <Route path="/" element={<Dashboard />} />

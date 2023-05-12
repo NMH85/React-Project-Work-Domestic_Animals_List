@@ -2,7 +2,7 @@ import React from 'react';
 import './App.scss';
 import { BrowserRouter } from 'react-router-dom';
 import { Header } from './modules/layout/Header';
-import { AppRoutes } from './Routes';
+import { Directory_Paths } from './DirPaths';
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <BrowserRouter>
         <Header />
         <div className="app-content">
-          <AppRoutes />
+          <Directory_Paths />
         </div>
       </BrowserRouter>
     </div>
