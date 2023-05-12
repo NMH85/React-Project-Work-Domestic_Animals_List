@@ -190,6 +190,7 @@ return (
     <option value="Norwegian">Norwegian</option>
     <option value="Maine Coon">Maine Coon</option>
     <option value="Sphynx">Sphynx</option>
+    <option value="Scottish Fold">Scottish Fold</option>
   
   </>) : 
   
@@ -205,6 +206,7 @@ return (
     <option value="German Shepherd">German Shepherd</option>
     <option value="Great Dane">Great Dane</option>
     <option value="Rough Collie">Rough Collie</option>
+    <option value="Labrador Retriever">Labrador Retriever</option>
   
   </> )}
   
