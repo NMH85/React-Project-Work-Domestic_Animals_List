@@ -115,7 +115,7 @@ const [homelyFriendState, setHomelyFriendState] =
 
       <div className='all infos'>
 
-        <div>Pedigree : {homelyFriendState.homely_friend?.pedigree}</div>
+        <div>Pedigree : {homelyFriendState.homely_friend.pedigree ? "Present" : "Not Present"}</div>
 
       </div>
 
