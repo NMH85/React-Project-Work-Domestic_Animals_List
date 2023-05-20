@@ -2,12 +2,12 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { URL } from '../../../../API_URL';
 import { IHomelyFriend } from "../../../../model/HomelyFriend";
-import { HomelyFriendSorting } from '../Homely-Friends-Sort';
+import { HomelyFriendSorting } from '../../../components/Homely-Friends-Sort';
 
 
 
 
-type THomelyFriendState = {
+type THomelyFriendRead = {
 
     retrevingData: boolean;
     error: boolean;
@@ -16,7 +16,7 @@ type THomelyFriendState = {
 
 export const Dashboard = () => {
 
-const [homelyFriendState, setHomelyFriendState] = useState<THomelyFriendState>({
+const [homelyFriendState, setHomelyFriendState] = useState<THomelyFriendRead>({
 
     retrevingData: false,
     error: false,
@@ -39,6 +39,7 @@ try {
 
 const ask = await axios.get(`${URL}/animal`);
 const data: IHomelyFriend[] = ask.data;
+
 setHomelyFriendState({...homelyFriendState, homely_friends: data, retrevingData: false});
 
 } catch (er){
@@ -58,8 +59,8 @@ useEffect(() => {
 return (
 
 <div className= 'homely_friends'> 
-    <h1 className= 'homely_friends title'> HOMELY FRIENDS CATALOG</h1>
-        <div className= 'homely_friends Sort'>
+    <h1 className= 'homely_friends title'> - PET CATALOG -</h1>
+        <div className= 'homely_friends-Dash-Sort'>
 
     {homelyFriendState.retrevingData && 'Retrieving Data'}
     {homelyFriendState.error && 'Error'}

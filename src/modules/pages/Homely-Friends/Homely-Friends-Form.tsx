@@ -9,7 +9,7 @@ import { IHomelyFriend } from "../../../model/HomelyFriend";
 
 
 
-type THomelyFriendStateII = {
+type THomelyFriendCreateUpdate = {
   
   retrevingData: boolean;
   error: boolean;
@@ -27,7 +27,7 @@ export const HomelyFriendForm = () => {
 
   const _id = check._id;
 
-  const [homelyFriendState, setHomelyFriendState] = useState <THomelyFriendStateII>({
+  const [homelyFriendState, setHomelyFriendState] = useState <THomelyFriendCreateUpdate>({
 
     retrevingData: false,
     error: false,
@@ -90,8 +90,8 @@ try {
 const ask = !data._id ? await axios.post(`${URL}/animal`, data) 
 : await axios.put(`${URL}/animal/${_id}`, data);
 
-const notify = !data._id ? `You have successfully registered you friend`
-: `Friend's Infos updated`;
+const notify = !data._id ? `You have successfully Registered your Friend`
+: `Friend's Infos Updated`;
 
 setHomelyFriendState({
 ...homelyFriendState,
@@ -136,9 +136,9 @@ return (
 
 <div className='Homely_Friend_Form'>
 
-{!_id && <><h1>REGISTER YOUR FRIEND</h1></>}
+{!_id && <><h1>- REGISTER YOUR PET -</h1></>}
 
-{_id && <><h1>UPDATE YOUR FRIEND INFOS</h1></>}
+{_id && <><h1>- UPDATE YOUR PET'S INFOS -</h1></>}
 
 
 <form>
@@ -289,21 +289,22 @@ return (
   <div className='row'>
 
 {!homelyFriendState.retrevingData && <>
+  
+  
+      <button className='Register-Button'
+      
 
-<div className='row-RegButton'>
+        disabled={!isValid}onClick={handleSubmit(onSubmit)}> REGISTER PET
+        </button>
 
-
-<button disabled={!isValid}onClick={handleSubmit(onSubmit)}> REGISTER </button>
-
-{_id &&<>
-
-<button onClick={() => goTo(`/animal/${_id}`)}> GO BACK </button>
-
-</>}
-
-</div>
-
-</>}
+        
+          {_id && <>
+            <button className='Back-Button'
+              onClick={() => goTo(`/animal/${_id}`)}> BACK
+            </button>
+            </>}
+          
+          </>}
 
 </div>
 

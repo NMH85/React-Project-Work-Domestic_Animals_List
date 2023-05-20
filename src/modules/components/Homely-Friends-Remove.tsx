@@ -1,12 +1,12 @@
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { IHomelyFriend } from "../../../model/HomelyFriend";
-import { URL } from '../../../API_URL';
+import { IHomelyFriend } from "../../model/HomelyFriend";
+import { URL } from '../../API_URL';
 
 
 
-type THomelyFriendStateIII = {
+type THomelyFriendDelete = {
 
   confirmRemove: boolean;
   error: boolean;
@@ -26,7 +26,7 @@ const { homely_friend } = props;
 
 const goTo = useNavigate();
 
-const [homelyFriendRemoveState, setHomelyFriendRemoveState] = useState<THomelyFriendStateIII>({
+const [homelyFriendRemoveState, setHomelyFriendRemoveState] = useState<THomelyFriendDelete>({
 
 confirmRemove: false,
 removing: false,
@@ -52,11 +52,13 @@ try {
 await axios.delete(`${URL}/animal/${homely_friend._id}`);
 
 setHomelyFriendRemoveState({
-...homelyFriendRemoveState,
-removing: false,
+
+  ...homelyFriendRemoveState,
+
+  removing: false,
 });
 
-window.confirm(`Friend removed successfully`);
+window.confirm(`Friend Removed Successfully`);
 
 goTo(`/`);
 
@@ -67,7 +69,9 @@ update();
   setHomelyFriendRemoveState({
 
 ...homelyFriendRemoveState,
+
 removing: false,
+
 error: true,
 });
 
@@ -78,36 +82,43 @@ return (
 <div>
 {homelyFriendRemoveState.removing && 'Cancel...'}
 {!homelyFriendRemoveState.confirmRemove && <>
-
-<button disabled={homelyFriendRemoveState.removing} onClick={()=> {
+  
+<button className='Remove-Button'
+disabled={homelyFriendRemoveState.removing} onClick={()=> {
 
 setHomelyFriendRemoveState({
 
 ...homelyFriendRemoveState,
+
 confirmRemove: true,
 
 });
 
-}}>REMOVE FRIEND</button>
-
+}}>REMOVE PET
+</button>
 </>}
 
 {homelyFriendRemoveState.confirmRemove && <>
-  <p>Are you sure ?</p>
+  
+  <h3>Are you sure ?</h3>
+  
+  <button className='Confirm-Remove'
+  onClick={() => HomelyFriendErase()}>YES</button>
 
-  <button onClick={() => HomelyFriendErase()}>YES</button>
-<button onClick={() => {
+<button className='Not-Confirm-Remove'
+onClick={() => {
 
 goTo(`/`);
 
 setHomelyFriendRemoveState({
 
 ...homelyFriendRemoveState,
+
 confirmRemove: false
 
 });
 
-window.confirm ('Friend not removed');
+window.confirm ('Friend Not Removed');
 
 }}>NO</button>
 

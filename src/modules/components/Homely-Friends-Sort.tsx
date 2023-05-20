@@ -1,4 +1,4 @@
-import { IHomelyFriend } from "../../../model/HomelyFriend";
+import { IHomelyFriend } from "../../model/HomelyFriend";
 import { Link } from "react-router-dom";
 
 
@@ -15,27 +15,29 @@ export const HomelyFriendSorting = (props: Props) => {
   return (
     <div className="Homely-Friends-Sort">
     
-    <div className= "Basic Infos">
+    <div className= "Basic-Infos">
 
       <img src= {homely_friend.imgUrl} alt='homely friend picture'/>
 
-      <b>Name: {homely_friend.name}</b>
+      <b>Name : {homely_friend.name}</b>
       
-      <p>Breed: {homely_friend.breed}</p>
+      <p>Breed : {homely_friend.breed}</p>
       
-      <p>Type: {homely_friend.type}</p>
+      <p>Type : {homely_friend.type}</p>
       
-      <p>Born On: {homely_friend.birthDate}</p>
+      <p>Born On : {homely_friend.birthDate}</p>
 
-      <p>Pedigree: {homely_friend.pedigree ? 'YES' : 'NO'}</p>
-
-      
+      <p>Pedigree : {homely_friend.pedigree ? 'YES' : 'NO'}</p>
+    
+    <div>
+      <button className='Info-Button'>
       <Link to={`/animal/${homely_friend._id}`} state={homely_friend}>
         
-        <button>MORE INFORMATIONS</button>
+        MORE INFORMATIONS
         
         </Link> 
-       
+        </button>
+        </div>
     </div>
 
     </div>

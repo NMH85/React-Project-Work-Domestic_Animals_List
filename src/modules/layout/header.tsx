@@ -5,15 +5,21 @@ export const Header = () => {
   
   return (
     
-    <div className = " header ">
+    <div className ='header'>
     
-     <h3> Homely Friends for Sale </h3>
+    <h2> - Pets For Sale - </h2>
     
-      <Link to="/">Dashboard</Link>
+    
+     <h2>
+     <Link to="/">- DASHBOARD -</Link>
+     </h2>
       
-      <Link to="/animal/new">Register Your Friend</Link>
-    
+      <h2>
+      <Link to="/animal/new">- Register Into Catalog -</Link>
+      </h2>
+      
     </div>
+  
   );
 };
 
