@@ -94,7 +94,7 @@ confirmRemove: true,
 
 });
 
-}}>REMOVE PET
+}}>- REMOVE PET -
 </button>
 </>}
 
@@ -103,7 +103,7 @@ confirmRemove: true,
   <h3>Are you sure ?</h3>
   
   <button className='Confirm-Remove'
-  onClick={() => HomelyFriendErase()}>YES</button>
+  onClick={() => HomelyFriendErase()}>- YES -</button>
 
 <button className='Not-Confirm-Remove'
 onClick={() => {
@@ -120,7 +120,7 @@ confirmRemove: false
 
 window.confirm ('Friend Not Removed');
 
-}}>NO</button>
+}}>- NO -</button>
 
 
   </>}

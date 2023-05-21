@@ -131,6 +131,7 @@ fetchHomelyFriend();
 
 const watchImage = watch ('imgUrl');
 const watchType = watch("type");
+const buttonLettering = homelyFriendState.homely_friend?._id ?  "- UPDATE PET PROFILE -" : "- REGISTER PET PROFILE -";
 
 return (
 
@@ -294,14 +295,19 @@ return (
       <button className='Register-Button'
       
 
-        disabled={!isValid}onClick={handleSubmit(onSubmit)}> REGISTER PET
+        disabled={!isValid}onClick={handleSubmit(onSubmit)}> {buttonLettering}
+        
         </button>
 
         
           {_id && <>
+            
             <button className='Back-Button'
-              onClick={() => goTo(`/animal/${_id}`)}> BACK
+            
+            onClick={() => goTo(`/animal/${_id}`)}> - BACK -
+            
             </button>
+            
             </>}
           
           </>}

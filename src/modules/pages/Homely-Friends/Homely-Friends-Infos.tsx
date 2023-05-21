@@ -156,14 +156,18 @@ const [homelyFriendState, setHomelyFriendState] =
         
         onClick={ ()=> goTo (`/animal/${homelyFriendState.homely_friend?._id}/edit`)}>
 
-        MODIFY PET
+        - MODIFY PET -
         </button>
       
-      <HomelyFriendRemove homely_friend= {homelyFriendState.homely_friend}/>
-
+  <HomelyFriendRemove homely_friend= {homelyFriendState.homely_friend}/>
 
       </>}
   
       </div>
   );
 };
+
+
+
+
+
